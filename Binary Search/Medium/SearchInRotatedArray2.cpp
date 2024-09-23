@@ -1,5 +1,6 @@
 // SEARCH IN A ROTATED SORTED ARRAY ( with Duplicates)
-
+// Time Complexity = near about O(2^n) but in worst case O(n/2)
+// Space Complexity = O(1)
 class Solution {
 public:
     bool search(vector<int>& nums, int target) {
