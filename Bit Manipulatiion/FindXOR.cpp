@@ -41,6 +41,6 @@ class Solution {
 
 //Above is the most optimized version of this problem, TC = O(1) & SC = O(1)
 
-//The Brute Force of this problem would be running a loop between the range with TC = O(N) where N = l-r and applying XOR one by one.
+//The Brute Force of this problem would be running a loop between the range with TC = O(N) where N = l-r and applying XOR one by one...
 
 
