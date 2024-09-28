@@ -3,6 +3,7 @@
 // Note: The solution set must not contain duplicate combinations.
 
 //EXAMPLE: arr = {2,1,2,1,1} ans = [[1,1,2],[2,2]]
+//Time Complexity = O(2^n * k) Space Complexity = O(k*x) where, k = avg. length of each combinations and x = no. of combinations
 
 class Solution {
 private:
