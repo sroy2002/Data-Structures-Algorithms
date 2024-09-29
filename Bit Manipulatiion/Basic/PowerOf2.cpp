@@ -1,3 +1,6 @@
+/// check if the given number is a power of 2 or not
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
