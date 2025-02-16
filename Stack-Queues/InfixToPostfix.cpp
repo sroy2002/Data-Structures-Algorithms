@@ -1,0 +1,43 @@
+private:
+int priority(char ch){
+    if(ch=='+' || ch=='-')return 1;
+    else if(ch=='*' || ch=='/')return 2;
+    else if(ch=='^') return 3;
+    return 0;
+}
+public:
+ // Function to convert an infix expression to a postfix expression.
+ string infixToPostfix(string& s) {
+     // Your code here
+     string ans="";
+     stack<char>st;
+     for(int i=0;i<s.length();i++){
+         if((s[i]>='A' && s[i]<='Z') || (s[i]>='a' && s[i]<='z') 
+         || (s[i]>='0' && s[i]<='9')){
+             ans = ans+s[i];
+         }
+         else if(s[i]=='('){
+             st.push(s[i]);
+         }
+         else if(s[i]==')'){
+             while(!st.empty() && st.top()!='('){
+                 ans = ans + s[i];
+                 st.pop();
+             }
+             st.pop();
+         }
+         else{
+             while(!st.empty() && priority(st.top())>=priority(s[i])){
+                 ans=ans+st.top();
+                 st.pop();
+             }
+             st.push(s[i]);
+         }
+     }
+     while(!st.empty()){
+         ans = ans+st.top();
+         st.pop();
+     }
+     return ans;
+ }
+};
